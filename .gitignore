@@ -1,0 +1,11 @@
+# Exclude the virtual environment directory
+venv/
+
+# Exclude the .git directory
+.git/
+
+# Exclude the .idea directory
+.idea/
+
+# Exclude __pycache__ directories
+__pycache__/
