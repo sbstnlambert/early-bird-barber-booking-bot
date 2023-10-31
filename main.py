@@ -63,8 +63,9 @@ def toggle_barber_option(driver, wait, has_barber_option):
 
 
 def check_appointment_availability(driver, notifier, wait):
-    # Define the appointment date (make this configurable)
-    appointment_date = datetime(2023, 12, 29, 10, 0)
+    # TODO: Define your appointment date
+    # i.e. below is the date 2024, February 9 at 10:00am
+    appointment_date = datetime(2024, 2, 9, 10, 0)
 
     # Wait for the month element to be visible
     time.sleep(5)
@@ -84,8 +85,9 @@ def main():
     # Initialize configuration
     config = Config()
 
-    # Initialize Notifier with Pushbullet API key
-    notifier = Notifier("o.oWmXGEvKma6mRIqdxDzwpwO9bNlVoyEj")
+    # TODO: Initialize Notifier with your Pushbullet API key between the quote marks.
+    # i.e. notifier = Notifier("o.qYmXVTvKmb1mMVqdxDzwpw54bNlVoyQp")
+    notifier = Notifier("")
 
     # Create a service object for ChromeDriver
     driver = setup_chrome_driver(config)

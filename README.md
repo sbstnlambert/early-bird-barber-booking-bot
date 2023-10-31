@@ -2,6 +2,12 @@
 
 The Early Bird Barber Booking Bot is an automation tool designed to simplify the process of checking for available slots at a hair salon by accessing its online calendar. It provides advanced notifications for appointment cancellations, enabling you to secure your desired time slot with ease. Say goodbye to manual appointment checks and embrace a stress-free scheduling experience!
 
+# Aim of the app
+
+The Early Bird Barber Booking Bot is a small program I created to explore the world of Python programming while solving a practical problem: booking barber appointments online! Please note that this application is specifically tailored to work with a particular barber website based in Belgium. The intricacies of web scraping code are heavily dependent on the structure and content of the website being accessed. As a result, the code provided in this repository is customized for the layout and elements of the specified barber website in Belgium.
+
+Before deploying this application for use, ensure that you have the necessary permissions from the website owner to access and scrape their data. Additionally, be aware that any changes made to the target website's structure or content may require corresponding adjustments to the scraping code in this application.
+
 ## Features
 
 - **Automated Slot Checking**: The bot automatically monitors the salon's online calendar for available slots, eliminating the need for manual checks.
@@ -37,11 +43,13 @@ Before you begin, ensure you have met the following requirements:
 
 ### Configuration
 
-4. Configure the bot settings in `config/config.py`, including the salon's URL and ChromeDriver path.
+4. Configure the ChromeDriver path in `config/config.py`, depending on the OS you're using. If the ChromeDriver version doesn't match your Chrome version, find and download the relevant version on the [Google Chrome Labs](https://googlechromelabs.github.io/chrome-for-testing/).
 
-5. Obtain a Pushbullet API key from [Pushbullet](https://www.pushbullet.com/) and update it in the `Notifier` class constructor in `notifications/notifier.py`.
+5. Obtain a Pushbullet API key from [Pushbullet](https://www.pushbullet.com/) and update it in `main.py`.
 
-6. Run the bot by executing:
+6. Still in `main.py`, select your `appointment_date` in the `check_appointment_availability()` method.
+
+7. Run the bot by executing:
 
 ```python main.py```
 

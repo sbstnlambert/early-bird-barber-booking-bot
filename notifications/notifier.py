@@ -7,7 +7,7 @@ class Notifier:
     """
     A class for checking appointment availability and sending notifications.
     """
-    NOTIFICATION_TITLE = "New Opening"
+    NOTIFICATION_TITLE = "Earlier Barber Appointment Available!"
 
     def __init__(self, api_key):
         """
@@ -64,7 +64,7 @@ class Notifier:
                                                           calendar_year_num)
 
                     if is_available:
-                        message = f"The date {day_number} {calendar_month} {calendar_year} is available for an appointment with Gianni Basciu."
+                        message = f"Great news! An earlier slot at the barber just opened up on {day_number} {calendar_month} {calendar_year}. You can now get your hair done sooner than expected!"
                         self.notify_available_date(notification_title, message)
                         self.notified_dates.add((calendar_year_num, calendar_month_num, day_number))
 
